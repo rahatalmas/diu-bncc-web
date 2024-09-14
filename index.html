@@ -11,7 +11,7 @@
         <div class="header-row">
 
             <section class="header-col-1">
-                 <img class="logo" alt="logo" src="./assets/dummy-logo.jpg"/>
+                 <img class="logo" alt="logo" src="./assets/Bncc_logo.png"/>
                  <div class="header-titles">
                     <h2 class="h-title-1">Bangladesh National Cadet Corps</h2>
                     <h3 class="h-title-2">Daffodil International University</h3>
@@ -41,12 +41,72 @@
     </nav>
 
     <main class="main">
-        <div class="banner-slider">
-             hello
+        <div class="slider">
+            <div class="slides">
+                <div class="slide" style="background-color: red;">
+                    <img alt="slider-image" class="slider-image" src="./assets/image1.jpg"/>
+                </div>
+                <div class="slide" style="background-color: blue;">
+                    <img alt="slider-image" class="slider-image" src="./assets/image2.webp"/>
+                </div>
+                <div class="slide" style="background-color: green;">
+                    <img alt="slider-image" class="slider-image" src="./assets/image3.jpg"/>
+                </div>
+            </div>
+            <button class="prev">❮</button>
+            <button class="next">❯</button>
         </div>
     </main>
-    
+
+
+   <section class="body-section-1">
+      <div class="row">
+         <h2 class="h">Our Pride</h2>
+         <p class="p">A few amongst us created their mark on the world stage by acheiving the uncommon. Meet these inspiring men and women.</p>
+         <button>Read More</button>
+      </div>
+      <div class="row">
+        <h2 class="h" >The Architect</h2>
+        <p class="p">A few amongst us created their mark on the world stage by acheiving the uncommon. Meet these inspiring men and women.</p>
+        <button>Read More</button>
+     </div>
+   </section>
+
+
+    <script>
+        const slides = document.querySelector('.slides');
+        const slideCount = document.querySelectorAll('.slide').length;
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            if (index >= slideCount) {
+                currentIndex = 0;
+            } else if (index < 0) {
+                currentIndex = slideCount - 1;
+            } else {
+                currentIndex = index;
+            }
+            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            showSlide(currentIndex - 1);
+        });
+
+        nextButton.addEventListener('click', () => {
+            showSlide(currentIndex + 1);
+        });
+
+        setInterval(() => {
+            showSlide(currentIndex + 1);
+        }, 3000);
+
+    </script>
 </body>
+
 </html>
 
 <!--
