@@ -1,5 +1,6 @@
 body{
    margin: 0;
+   padding: 0;
 }
 
 .header{
@@ -46,7 +47,7 @@ body{
 }
 .nav{
     margin: auto;
-    max-width: 1400px;
+   
     padding: 25px;
     display: flex;
     flex-direction: row;
@@ -69,7 +70,6 @@ body{
 .main{
     background-color: bisque;
 }
-
 
 
 
@@ -213,7 +213,7 @@ body{
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: 600px) {
     .header-row {
         flex-direction: column;
         align-items: flex-start;
@@ -223,11 +223,18 @@ body{
         flex-direction: column;
         align-items: center;
         background-color: rebeccapurple;
+        
     }
-    
+    .nav-section-1{
+        width: 100%;
+        display: block;
+    }
     .nav-item {
         padding:10px 0px;
-        background-color: red;
+       color: aliceblue;
+        margin-top: 20px;
+        display: block;
+        
     }
     
     .body-section-1 {
@@ -237,7 +244,7 @@ body{
     .row {
         margin: 10px 0;
         padding: 15px;
-        width: 100%;
+        
     }
 
 
