@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Home</title>
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto">
+      <header class="py-5">
+        <div class="flex justify-between items-center max-w-6xl mx-auto">
+          <div class="flex items-center">
+            <img
+              class="h-20 w-20 rounded-lg object-cover"
+              alt="logo"
+              src="./assets/Bncc_logo.png"
+            />
+            <div class="ml-5 border-l-4 border-gray-400 pl-3">
+              <h2 class="text-gray-800 font-bold text-lg">
+                Bangladesh National Cadet Corps
+              </h2>
+              <h3 class="text-gray-800 text-sm">
+                Daffodil International University
+              </h3>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <nav class="bg-green-100 border-t-2 border-gray-300 py-4">
+        <div class="container mx-auto flex justify-center items-center px-4">
+          <!-- Mobile Menu Button (Positioned at the end) -->
+          <button
+            id="menu-toggle"
+            class="md:hidden text-gray-800 focus:outline-none ml-auto"
+            onclick="toggleMenu()"
+          >
+            <!-- Hamburger Icon -->
+            <svg
+              id="menu-icon"
+              class="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+            <!-- Close Icon (Initially hidden) -->
+            <svg
+              id="close-icon"
+              class="hidden h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- Navbar Links -->
+          <div id="nav-links" class="hidden md:flex space-x-6 text-gray-800">
+            <a href="./index.html" class="hover:underline">Home</a>
+            <a href="#" class="hover:underline">About</a>
+            <a href="#" class="hover:underline">Notice Board</a>
+            <a href="#" class="hover:underline">Honour Board</a>
+            <a href="#" class="hover:underline">Cadet Corner</a>
+            <a href="#" class="hover:underline">Gallery</a>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Links -->
+        <div
+          id="mobile-menu"
+          class="md:hidden hidden flex-col items-center space-y-2 mt-4 text-gray-800"
+        >
+          <a href="./index.html" class="block hover:underline">Home</a>
+          <a href="#" class="block hover:underline">About</a>
+          <a href="#" class="block hover:underline">Notice Board</a>
+          <a href="#" class="block hover:underline">Honour Board</a>
+          <a href="#" class="block hover:underline">Cadet Corner</a>
+          <a href="#" class="block hover:underline">Gallery</a>
+        </div>
+      </nav>
+
+      <div
+        class="h-96 flex justify-center items-center bg-green-100 border-t-8 border-t-white mt-10"
+      >
+        <h1 class="text-6xl font-bold text-center">Gallery</h1>
+      </div>
+
+      <main class="py-10">
+        <div class="container mx-auto">
+          <h2 class="text-4xl font-semibold text-center mb-10">
+            Image Gallery
+          </h2>
+
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+          >
+            <div class="relative overflow-hidden group">
+              <img
+                src="https://bncc.info/web/image/386072-c22ea88c/111.JPG"
+                alt="Image 1"
+                class="w-full h-full object-cover transition-transform duration-300 transform group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-black opacity-50 group-hover:opacity-0 transition-opacity duration-300"
+              ></div>
+              <div
+                class="absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <button
+                  class="px-6 py-3 bg-yellow-500 rounded-lg view-btn"
+                  data-img="https://bncc.info/web/image/386072-c22ea88c/111.JPG"
+                >
+                  View
+                </button>
+              </div>
+            </div>
+
+            <div class="relative overflow-hidden group">
+              <img
+                src="https://bncc.info/web/image/255509-0e93ea0a/%E0%A6%AE%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%A8%E0%A6%97%E0%A6%BE%E0%A6%A8%20%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%A3%E0%A6%B0%E0%A6%A4%20%E0%A6%AC%E0%A6%BF%E0%A6%8F%E0%A6%A8%E0%A6%B8%E0%A6%BF%E0%A6%B8%E0%A6%BF%E0%A6%B0%20%E0%A6%95%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A1%E0%A7%87%E0%A6%9F%E0%A6%97%E0%A6%A3.jpg"
+                alt="Image 2"
+                class="w-full h-full object-cover transition-transform duration-300 transform group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-black opacity-50 group-hover:opacity-0 transition-opacity duration-300"
+              ></div>
+              <div
+                class="absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <button
+                  class="px-6 py-3 bg-yellow-500 rounded-lg view-btn"
+                  data-img="https://bncc.info/web/image/255509-0e93ea0a/%E0%A6%AE%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%A8%E0%A6%97%E0%A6%BE%E0%A6%A8%20%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%A3%E0%A6%B0%E0%A6%A4%20%E0%A6%AC%E0%A6%BF%E0%A6%8F%E0%A6%A8%E0%A6%B8%E0%A6%BF%E0%A6%B8%E0%A6%BF%E0%A6%B0%20%E0%A6%95%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A1%E0%A7%87%E0%A6%9F%E0%A6%97%E0%A6%A3.jpg"
+                >
+                  View
+                </button>
+              </div>
+            </div>
+
+            <div class="relative overflow-hidden group">
+              <img
+                src="https://bncc.info/web/image/255506-d0da4cc0/wt.JPG"
+                alt="Image 3"
+                class="w-full h-full object-cover transition-transform duration-300 transform group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-black opacity-50 group-hover:opacity-0 transition-opacity duration-300"
+              ></div>
+              <div
+                class="absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <button
+                  class="px-6 py-3 bg-yellow-500 rounded-lg view-btn"
+                  data-img="https://bncc.info/web/image/255506-d0da4cc0/wt.JPG"
+                >
+                  View
+                </button>
+              </div>
+            </div>
+
+            <div class="relative overflow-hidden group">
+              <img
+                src="https://bncc.info/web/image/255507-ef50dae0/DSC_6233.JPG"
+                alt="Image 4"
+                class="w-full h-full object-cover transition-transform duration-300 transform group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-black opacity-50 group-hover:opacity-0 transition-opacity duration-300"
+              ></div>
+              <div
+                class="absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <button
+                  class="px-6 py-3 bg-yellow-500 rounded-lg view-btn"
+                  data-img="https://bncc.info/web/image/255507-ef50dae0/DSC_6233.JPG"
+                >
+                  View
+                </button>
+              </div>
+            </div>
+            <div class="relative overflow-hidden group">
+              <img
+                src="https://bncc.info/web/image/386072-c22ea88c/111.JPG"
+                alt="Image 1"
+                class="w-full h-full object-cover transition-transform duration-300 transform group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-black opacity-50 group-hover:opacity-0 transition-opacity duration-300"
+              ></div>
+              <div
+                class="absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <button
+                  class="px-6 py-3 bg-yellow-500 rounded-lg view-btn"
+                  data-img="https://bncc.info/web/image/386072-c22ea88c/111.JPG"
+                >
+                  View
+                </button>
+              </div>
+            </div>
+            <div class="relative overflow-hidden group">
+              <img
+                src="https://bncc.info/web/image/386072-c22ea88c/111.JPG"
+                alt="Image 1"
+                class="w-full h-full object-cover transition-transform duration-300 transform group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-black opacity-50 group-hover:opacity-0 transition-opacity duration-300"
+              ></div>
+              <div
+                class="absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <button
+                  class="px-6 py-3 bg-yellow-500 rounded-lg view-btn"
+                  data-img="https://bncc.info/web/image/386072-c22ea88c/111.JPG"
+                >
+                  View
+                </button>
+              </div>
+            </div>
+            <div class="relative overflow-hidden group">
+              <img
+                src="https://bncc.info/web/image/386072-c22ea88c/111.JPG"
+                alt="Image 1"
+                class="w-full h-full object-cover transition-transform duration-300 transform group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-black opacity-50 group-hover:opacity-0 transition-opacity duration-300"
+              ></div>
+              <div
+                class="absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <button
+                  class="px-6 py-3 bg-yellow-500 rounded-lg view-btn"
+                  data-img="https://bncc.info/web/image/386072-c22ea88c/111.JPG"
+                >
+                  View
+                </button>
+              </div>
+            </div>
+            <div class="relative overflow-hidden group">
+              <img
+                src="https://bncc.info/web/image/386072-c22ea88c/111.JPG"
+                alt="Image 1"
+                class="w-full h-full object-cover transition-transform duration-300 transform group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-black opacity-50 group-hover:opacity-0 transition-opacity duration-300"
+              ></div>
+              <div
+                class="absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <button
+                  class="px-6 py-3 bg-yellow-500 rounded-lg view-btn"
+                  data-img="https://bncc.info/web/image/386072-c22ea88c/111.JPG"
+                >
+                  View
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal  -->
+        <div
+          id="modal"
+          class="fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center"
+        >
+          <div class="relative max-w-4xl mx-auto bg-white p-5">
+            <button
+              id="closeModal"
+              class="absolute top-2 right-2 text-black text-3xl"
+            >
+              X
+            </button>
+            <img
+              id="modalImage"
+              src=""
+              alt="Full Image"
+              class="w-full h-auto"
+            />
+          </div>
+        </div>
+      </main>
+
+      <footer
+        class="max-w-6xl mx-auto mt-40 border-t-2 border-gray-300 py-10 grid grid-cols-1 md:grid-cols-4 gap-8 text-center"
+      >
+        <div>
+          <h3 class="font-semibold">About Us</h3>
+          <p>Daffodil University, Bangladesh</p>
+          <p>bncc.diu.edu.bd</p>
+          <p>01*********</p>
+        </div>
+        <div>
+          <h3 class="font-semibold">Quick Links</h3>
+          <p>Home</p>
+          <p>About BNCC</p>
+          <p>Social Activities</p>
+          <p>Training Activities</p>
+          <p>Events</p>
+          <p>Join Us</p>
+          <p>BNCC Portal</p>
+        </div>
+        <div>
+          <h3 class="font-semibold">Quick Links</h3>
+          <p>Home</p>
+          <p>About BNCC</p>
+          <p>Social Activities</p>
+          <p>Training Activities</p>
+          <p>Events</p>
+          <p>Join Us</p>
+          <p>BNCC Portal</p>
+        </div>
+        <div>
+          <h3 class="font-semibold">Quick Links</h3>
+          <p>Home</p>
+          <p>About BNCC</p>
+          <p>Social Activities</p>
+          <p>Training Activities</p>
+          <p>Events</p>
+          <p>Join Us</p>
+          <p>BNCC Portal</p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const viewButtons = document.querySelectorAll(".view-btn");
+      const modal = document.getElementById("modal");
+      const modalImage = document.getElementById("modalImage");
+      const closeModal = document.getElementById("closeModal");
+
+      viewButtons.forEach((button) => {
+        button.addEventListener("click", (e) => {
+          const imgSrc = e.target.getAttribute("data-img");
+
+          modalImage.src = imgSrc;
+
+          modal.classList.remove("hidden");
+        });
+      });
+
+      closeModal.addEventListener("click", () => {
+        modal.classList.add("hidden");
+      });
+
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.classList.add("hidden");
+        }
+      });
+    </script>
+  </body>
+</html>
