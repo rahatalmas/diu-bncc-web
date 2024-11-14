@@ -30,7 +30,9 @@
           </div>
         </div>
       </header>
-
+     <?php 
+       echo "hello world"
+     ?>
       <nav class="bg-green-100 border-t-2 border-gray-300 py-4">
         <div class="container mx-auto flex justify-center items-center px-4">
           <!-- Mobile Menu Button (Positioned at the end) -->
