@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Home</title>
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto">
+      <header class="py-5">
+        <div class="flex justify-between items-center max-w-6xl mx-auto">
+          <div class="flex items-center">
+            <img
+              class="h-20 w-20 rounded-lg object-cover"
+              alt="logo"
+              src="./assets/Bncc_logo.png"
+            />
+            <div class="ml-5 border-l-4 border-gray-400 pl-3">
+              <h2 class="text-gray-800 font-bold text-lg">
+                Bangladesh National Cadet Corps
+              </h2>
+              <h3 class="text-gray-800 text-sm">
+                Daffodil International University
+              </h3>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <nav class="bg-green-100 border-t-2 border-gray-300 py-4">
+        <div class="container mx-auto flex justify-center items-center px-4">
+          <!-- Mobile Menu Button (Positioned at the end) -->
+          <button
+            id="menu-toggle"
+            class="md:hidden text-gray-800 focus:outline-none ml-auto"
+            onclick="toggleMenu()"
+          >
+            <!-- Hamburger Icon -->
+            <svg
+              id="menu-icon"
+              class="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+            <!-- Close Icon (Initially hidden) -->
+            <svg
+              id="close-icon"
+              class="hidden h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- Navbar Links -->
+          <div id="nav-links" class="hidden md:flex space-x-6 text-gray-800">
+            <a href="./index.html" class="hover:underline">Home</a>
+            <a href="#" class="hover:underline">About</a>
+            <a href="#" class="hover:underline">Notice Board</a>
+            <a href="#" class="hover:underline">Honour Board</a>
+            <a href="#" class="hover:underline">Cadet Corner</a>
+            <a href="/gallery.html" class="hover:underline">Gallery</a>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Links -->
+        <div
+          id="mobile-menu"
+          class="md:hidden hidden flex-col items-center space-y-2 mt-4 text-gray-800"
+        >
+          <a href="./index.html" class="block hover:underline">Home</a>
+          <a href="#" class="block hover:underline">About</a>
+          <a href="#" class="block hover:underline">Notice Board</a>
+          <a href="#" class="block hover:underline">Honour Board</a>
+          <a href="#" class="block hover:underline">Cadet Corner</a>
+          <a href="#" class="block hover:underline">Gallery</a>
+        </div>
+      </nav>
+      <div
+        class="h-96 flex justify-center items-center bg-green-100 border-t-8 border-t-white mt-10"
+      >
+        <h1
+          class="text-6xl font-bold text-center bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 bg-clip-text text-transparent"
+        >
+          Cadet Corner
+        </h1>
+      </div>
+
+     <div class=" mt-10 mb-20">
+        <div class="  grid grid-cold-1 lg:grid-cols-3 items-center justify-center align-middle p-5 lg:p-0">
+            <div>
+                <div
+                  class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 dark:bg-gray-800 dark:border-gray-700"
+                >
+                  <h5
+                    class="mb-3 text-base font-semibold text-gray-900 md:text-xl dark:text-white"
+                  >
+                    Cadet Corner
+                  </h5>
+                  <p class="text-sm font-normal text-gray-500 dark:text-gray-400">
+                    See all cadet information and link.
+                  </p>
+                  <ul class="my-4 space-y-3">
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+                      >
+                        <span class="flex-1 ms-3 whitespace-nowrap"
+                          >How to join bncc</span
+                        >
+                        <span
+                          class="inline-flex items-center justify-center px-2 py-0.5 ms-3 text-xs font-medium text-gray-500 bg-gray-200 rounded dark:bg-gray-700 dark:text-gray-400"
+                          >Popular</span
+                        >
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+                      >
+                        <span class="flex-1 ms-3 whitespace-nowrap"
+                          >Cadets Welfare Society</span
+                        >
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+                      >
+                        <span class="flex-1 ms-3 whitespace-nowrap"
+                          >Benefits of BNCC</span
+                        >
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+                      >
+                        <span class="flex-1 ms-3 whitespace-nowrap"
+                          >Attachments of Training</span
+                        >
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+                      >
+                        <span class="flex-1 ms-3 whitespace-nowrap"
+                          >Youth Exchange Program</span
+                        >
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+                      >
+                        <span class="flex-1 ms-3 whitespace-nowrap"
+                          >Cadet Verification</span
+                        >
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+                      >
+                        <span class="flex-1 ms-3 whitespace-nowrap">Allowances</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+                      >
+                        <span class="flex-1 ms-3 whitespace-nowrap">Uniform Items</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div>
+                <div
+                  class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 dark:bg-gray-800 dark:border-gray-700"
+                >
+                  <h5
+                    class="mb-3 text-base font-semibold text-gray-900 md:text-xl dark:text-white"
+                  >
+                  BNCC HQ/REGIMENTS/WINGS
+
+                  </h5>
+                  <p class="text-sm font-normal text-gray-500 dark:text-gray-400">
+                    See all cadet information and link.
+                  </p>
+                  <ul class="my-4 space-y-3">
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+                      >
+                        <span class="flex-1 ms-3 whitespace-nowrap"
+                          >How to join bncc</span
+                        >
+                        <span
+                          class="inline-flex items-center justify-center px-2 py-0.5 ms-3 text-xs font-medium text-gray-500 bg-gray-200 rounded dark:bg-gray-700 dark:text-gray-400"
+                          >Popular</span
+                        >
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+                      >
+                        <span class="flex-1 ms-3 whitespace-nowrap"
+                          >Cadets Welfare Society</span
+                        >
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+                      >
+                        <span class="flex-1 ms-3 whitespace-nowrap"
+                          >Benefits of BNCC</span
+                        >
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+                      >
+                        <span class="flex-1 ms-3 whitespace-nowrap"
+                          >Attachments of Training</span
+                        >
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+                      >
+                        <span class="flex-1 ms-3 whitespace-nowrap"
+                          >Youth Exchange Program</span
+                        >
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+                      >
+                        <span class="flex-1 ms-3 whitespace-nowrap"
+                          >Cadet Verification</span
+                        >
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+                      >
+                        <span class="flex-1 ms-3 whitespace-nowrap">Allowances</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+                      >
+                        <span class="flex-1 ms-3 whitespace-nowrap">Uniform Items</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div>
+                <div
+                  class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 dark:bg-gray-800 dark:border-gray-700"
+                >
+                  <h5
+                    class="mb-3 text-base font-semibold text-gray-900 md:text-xl dark:text-white"
+                  >
+                  POLICIES & GUIDELINES
+                  </h5>
+                  <p class="text-sm font-normal text-gray-500 dark:text-gray-400">
+                    See all cadet information and link.
+                  </p>
+                  <ul class="my-4 space-y-3">
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+                      >
+                        <span class="flex-1 ms-3 whitespace-nowrap"
+                          >How to join bncc</span
+                        >
+                        <span
+                          class="inline-flex items-center justify-center px-2 py-0.5 ms-3 text-xs font-medium text-gray-500 bg-gray-200 rounded dark:bg-gray-700 dark:text-gray-400"
+                          >Popular</span
+                        >
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+                      >
+                        <span class="flex-1 ms-3 whitespace-nowrap"
+                          >Cadets Welfare Society</span
+                        >
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+                      >
+                        <span class="flex-1 ms-3 whitespace-nowrap"
+                          >Benefits of BNCC</span
+                        >
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+                      >
+                        <span class="flex-1 ms-3 whitespace-nowrap"
+                          >Attachments of Training</span
+                        >
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+                      >
+                        <span class="flex-1 ms-3 whitespace-nowrap"
+                          >Youth Exchange Program</span
+                        >
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+                      >
+                        <span class="flex-1 ms-3 whitespace-nowrap"
+                          >Cadet Verification</span
+                        >
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+                      >
+                        <span class="flex-1 ms-3 whitespace-nowrap">Allowances</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+                      >
+                        <span class="flex-1 ms-3 whitespace-nowrap">Uniform Items</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+        </div>
+
+     </div>
+
+      <footer
+        class="max-w-6xl mx-auto mt-40 border-t-2 border-gray-300 py-10 grid grid-cols-1 md:grid-cols-4 gap-8 text-center"
+      >
+        <div>
+          <h3 class="font-semibold">About Us</h3>
+          <p>Daffodil University, Bangladesh</p>
+          <p>bncc.diu.edu.bd</p>
+          <p>01*********</p>
+        </div>
+        <div>
+          <h3 class="font-semibold">Quick Links</h3>
+          <p>Home</p>
+          <p>About BNCC</p>
+          <p>Social Activities</p>
+          <p>Training Activities</p>
+          <p>Events</p>
+          <p>Join Us</p>
+          <p>BNCC Portal</p>
+        </div>
+        <div>
+          <h3 class="font-semibold">Quick Links</h3>
+          <p>Home</p>
+          <p>About BNCC</p>
+          <p>Social Activities</p>
+          <p>Training Activities</p>
+          <p>Events</p>
+          <p>Join Us</p>
+          <p>BNCC Portal</p>
+        </div>
+        <div>
+          <h3 class="font-semibold">Quick Links</h3>
+          <p>Home</p>
+          <p>About BNCC</p>
+          <p>Social Activities</p>
+          <p>Training Activities</p>
+          <p>Events</p>
+          <p>Join Us</p>
+          <p>BNCC Portal</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
