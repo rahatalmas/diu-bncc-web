@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-screen bg-gray-100">
+
+  <div class="flex flex-col md:flex-row h-full">
+    <!-- Sidebar--left -->
+    <div class="w-full md:w-1/4 bg-gray-800 text-white flex flex-col">
+      <div class="p-4 text-lg font-bold border-b border-gray-700">
+        Dashboard
+      </div>
+      <nav class="flex-grow">
+        <ul class="space-y-2 p-4">
+          <li>
+            <button class="w-full text-left px-4 py-2 rounded hover:bg-gray-700" data-target="background">
+              Background Upload
+            </button>
+          </li>
+          <li>
+            <button class="w-full text-left px-4 py-2 rounded hover:bg-gray-700" data-target="slider">
+              Slider Image Upload
+            </button>
+          </li>
+          <li>
+            <button class="w-full text-left px-4 py-2 rounded hover:bg-gray-700" data-target="gallery">
+              Gallery Images
+            </button>
+          </li>
+          <li>
+            <button class="w-full text-left px-4 py-2 rounded hover:bg-gray-700" data-target="settings">
+              Settings
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <div class="p-4 border-t border-gray-700">
+        <button class="w-full text-left px-4 py-2 rounded bg-green-500 hover:bg-green-600">
+          Logout
+        </button>
+      </div>
+    </div>
+
+    <!-- Content Area -->
+    <div class="flex-grow p-4 md:p-8 bg-white">
+      <!-- Background Upload -->
+      <div id="background" class="hidden">
+        <h1 class="text-2xl font-bold mb-4">Background Upload</h1>
+        <p>Here, you can upload a background image.</p>
+      </div>
+
+      <!-- Slider Image Upload -->
+      <div id="slider" class="hidden">
+        <h1 class="text-2xl font-bold mb-4">Slider Image Upload</h1>
+        <p>Here, you can upload slider images.</p>
+      </div>
+
+      <!-- Gallery Images -->
+      <div id="gallery" class="hidden">
+        <h1 class="text-2xl font-bold mb-4">Gallery Images</h1>
+        <p>Here, you can manage gallery images.</p>
+      </div>
+
+      <!-- Settings -->
+      <div id="settings" class="hidden">
+        <h1 class="text-2xl font-bold mb-4">Settings</h1>
+        <p>Here, you can adjust settings.</p>
+      </div>
+    </div>
+  </div>
+
+ 
+  <div class="fixed bottom-4 right-4 md:hidden">
+    <button id="toggleSidebar" class="bg-gray-800 text-white px-4 py-2 rounded shadow-md">
+      Menu
+    </button>
+  </div>
+
+  <script>
+   
+    const sidebar = document.querySelector('div.w-full.md\\:w-1\\/4');
+    const toggleButton = document.getElementById('toggleSidebar');
+
+    toggleButton.addEventListener('click', () => {
+      sidebar.classList.toggle('hidden');
+      sidebar.classList.toggle('absolute');
+      sidebar.classList.toggle('inset-0');
+    });
+
+ 
+    document.querySelectorAll('button[data-target]').forEach(button => {
+      button.addEventListener('click', () => {
+       
+        document.querySelectorAll('div[id]').forEach(section => section.classList.add('hidden'));
+
+       
+        const targetId = button.getAttribute('data-target');
+        document.getElementById(targetId).classList.remove('hidden');
+
+        
+        if (window.innerWidth < 768) {
+          sidebar.classList.add('hidden');
+        }
+      });
+    });
+
+   
+    document.getElementById('background').classList.remove('hidden');
+  </script>
+
+</body>
+</html>
