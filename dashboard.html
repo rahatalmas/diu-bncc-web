@@ -62,8 +62,41 @@
       <!-- Gallery Images -->
       <div id="gallery" class="hidden">
         <h1 class="text-2xl font-bold mb-4">Gallery Images</h1>
-        <p>Here, you can manage gallery images.</p>
+        <p class="mb-4">Here, you can manage and upload gallery images.</p>
+      
+        <!-- Image Upload Form -->
+        <form id="imageUploadForm" class="mb-6 space-y-4" enctype="multipart/form-data">
+          <label class="block">
+            <span class="text-sm font-medium text-gray-700">Select Images</span>
+            <input
+              type="file"
+              id="galleryImages"
+              multiple
+              accept="image/*"
+              class="mt-2 block w-full text-sm text-gray-900 bg-gray-50 border border-gray-300 rounded-lg cursor-pointer focus:ring-blue-500 focus:border-blue-500"
+            />
+          </label>
+      
+          <!-- Preview Section -->
+          <div id="previewContainer" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            
+          </div>
+      
+          <button
+            type="submit"
+            class="px-4 py-2 bg-green-500 text-white font-medium rounded-lg shadow hover:bg-green-600"
+          >
+            Upload Images
+          </button>
+        </form>
+      
+        <!-- Uploaded Images Section -->
+        <h2 class="text-xl font-semibold mt-8">Uploaded Gallery</h2>
+        <div id="uploadedGallery" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mt-4">
+        
+        </div>
       </div>
+      
 
       <!-- Settings -->
       <div id="settings" class="hidden">
