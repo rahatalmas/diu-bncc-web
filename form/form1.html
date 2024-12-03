@@ -33,13 +33,11 @@
 
       <nav class="bg-green-100 border-t-2 border-gray-300 py-4">
         <div class="container mx-auto flex justify-center items-center px-4">
-          
           <button
             id="menu-toggle"
             class="md:hidden text-gray-800 focus:outline-none ml-auto"
             onclick="toggleMenu()"
           >
-           
             <svg
               id="menu-icon"
               class="h-6 w-6"
@@ -55,7 +53,7 @@
                 d="M4 6h16M4 12h16M4 18h16"
               ></path>
             </svg>
-           
+
             <svg
               id="close-icon"
               class="hidden h-6 w-6"
@@ -73,7 +71,6 @@
             </svg>
           </button>
 
-        
           <div id="nav-links" class="hidden md:flex space-x-6 text-gray-800">
             <a href="./index.html" class="hover:underline">Home</a>
             <a href="#" class="hover:underline">About</a>
@@ -84,16 +81,21 @@
           </div>
         </div>
 
-      
         <div
           id="mobile-menu"
           class="md:hidden hidden flex-col items-center space-y-2 mt-4 text-gray-800"
         >
           <a href="./index.html" class="block hover:underline">Home</a>
           <a href="#" class="block hover:underline">About</a>
-          <a href="/noticeboard.html" class="block hover:underline">Notice Board</a>
-          <a href="/honourBoard.html" class="block hover:underline">Honour Board</a>
-          <a href="/cadetconer.html" class="block hover:underline">Cadet Corner</a>
+          <a href="/noticeboard.html" class="block hover:underline"
+            >Notice Board</a
+          >
+          <a href="/honourBoard.html" class="block hover:underline"
+            >Honour Board</a
+          >
+          <a href="/cadetconer.html" class="block hover:underline"
+            >Cadet Corner</a
+          >
           <a href="/gallery.html" class="block hover:underline">Gallery</a>
         </div>
       </nav>
@@ -104,51 +106,182 @@
         <h1 class="text-6xl font-bold text-center">Cadet Form</h1>
       </div>
 
-     
-
-       
- <div>
-    <div class="container mx-auto">
-        <div class="bg-yellow-400">
-            <div class="flex flex-row justify-evenly items-center p-2">
-                <div>
-                    <img src="/assets/Bncc_logo.png" class="h-36" alt="">
-                </div>
-                <div class="text-center ">
-                    <h1 class="text-center text-3xl font-bold">বাংলাদেশ ন্যাশনাল ক্যাডেট কোর </h1>
-                    <p class="font-bold text-2xl mt-3 mb-3">ভর্তি ফরম</p>
-                    <p class="font-bold text-2xl">
-                      সিনিয়র/জুনিয়র ডিভিশন</p>
-
-                </div>
-                <div>
-                  <div class="h-48 w-48 border-black border-2 flex items-center justify-center">
-                    <p>ছবি</p>
-                  </div>
-                  
-                </div>
-            </div>
-            <div>
-              <div class="max-w-6xl mx-auto border-2 border-black p-2">
-
-                <div class="flex">
-                  <div class="border-r-2 border-black ">আবেদনকারী তার নিজের হাতে পূরণ করে: <span class="px-5">5</span>  </div>
-                <div class="px-5">ক্রোমিক নং:<span class="px-5">5</span> </div>
-                </div>
-
-              </div>
-
+      <div>
+        <div class="container mx-auto p-4">
+          <div class="bg-yellow-400">
+            <div class="flex flex-col md:flex-row justify-evenly items-center p-4">
+              <!-- Logo Section -->
               <div>
-                <div class="animate-bounce text-5xl mt-10 mb-10">
-                  1.boss baki ta tk dawar por vai 
+                <img src="/assets/Bncc_logo.png" class="h-24 md:h-36" alt="" />
+              </div>
+              <!-- Title Section -->
+              <div class="text-center">
+                <h1 class="text-center text-xl md:text-3xl font-bold">
+                  বাংলাদেশ ন্যাশনাল ক্যাডেট কোর
+                </h1>
+                <p class="font-bold text-lg md:text-2xl mt-2 mb-2">ভর্তি ফরম</p>
+                <p class="font-bold text-lg md:text-2xl">সিনিয়র/জুনিয়র ডিভিশন</p>
+              </div>
+              <!-- Photo Section -->
+              <div>
+                <div class="h-24 w-24 md:h-48 md:w-48 border-black border-2 flex items-center justify-center">
+                  <p>ছবি</p>
                 </div>
               </div>
             </div>
+        
+            <!-- Application Info -->
+            <div class="border-2 border-black p-4">
+              <div class="flex flex-col md:flex-row justify-between">
+                <div class="border-b md:border-b-0 md:border-r-2 border-black pb-2 md:pb-0 pr-4">
+                  আবেদনকারী তার নিজের হাতে পূরণ করে: <span class="px-2">5</span>
+                </div>
+                <div class="pt-2 md:pt-0 pl-4">
+                  ক্রোমিক নং: <span class="px-2">5</span>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Form Section -->
+            <div class="max-w-6xl mx-auto border-2 border-black p-4">
+              <form action="">
+                <!-- Name Section -->
+                <div class="flex flex-col gap-2 mb-4">
+                  <div class="flex gap-2 items-center">
+                    <span>1.</span>
+                    <p>আবেদনকারীর নাম:</p>
+                    <input type="text" class="flex-grow py-2 rounded bg-transparent border border-black border-dotted" />
+                  </div>
+                  <div class="flex gap-2 items-center">
+                    <p>বাংলা:</p>
+                    <input type="text" class="flex-grow py-2 bg-transparent border-b border-black border-dotted" />
+                  </div>
+                  <div class="flex gap-2 items-center">
+                    <p>ইংরেজি (BLOCK CAPITAL):</p>
+                    <input type="text" class="flex-grow py-2 bg-transparent border-b border-black border-dotted" />
+                  </div>
+                </div>
+        
+                <!-- Class, Roll, Subject Section -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                  <div class="flex gap-2 items-center">
+                    <p>ক্লাস:</p>
+                    <input type="text" class="w-full py-2 bg-transparent border-b border-black border-dotted" />
+                  </div>
+                  <div class="flex gap-2 items-center">
+                    <p>রোল:</p>
+                    <input type="text" class="w-full py-2 bg-transparent border-b border-black border-dotted" />
+                  </div>
+                  <div class="flex gap-2 items-center">
+                    <p>বিষয়:</p>
+                    <input type="text" class="w-full py-2 bg-transparent border-b border-black border-dotted" />
+                  </div>
+                </div>
+        
+                <!-- Date of Birth and Academic Year -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                  <div class="flex gap-2 items-center">
+                    <p>জন্ম তারিখ:</p>
+                    <input type="text" class="w-full py-2 bg-transparent border-b border-black border-dotted" />
+                  </div>
+                  <div class="flex gap-2 items-center">
+                    <p>শিক্ষাবর্ষ:</p>
+                    <input type="text" class="w-full py-2 bg-transparent border-b border-black border-dotted" />
+                  </div>
+                </div>
 
+                <div>
+                  <div class="flex gap-2 items-center">
+                    <p>ইংরেজি (BLOCK CAPITAL):</p>
+                    <input type="text" class="flex-grow py-2 bg-transparent border-b border-black border-dotted" />
+                  </div>
+                  <div class="flex gap-2 items-center">
+                    <p>ইংরেজি (BLOCK CAPITAL):</p>
+                    <input type="text" class="flex-grow py-2 bg-transparent border-b border-black border-dotted" />
+                  </div>
+                  <div class="flex gap-2 items-center">
+                    <p>ইংরেজি (BLOCK CAPITAL):</p>
+                    <input type="text" class="flex-grow py-2 bg-transparent border-b border-black border-dotted" />
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                  <div class="flex gap-2 items-center">
+                    <p>জন্ম তারিখ:</p>
+                    <input type="text" class="w-full py-2 bg-transparent border-b border-black border-dotted" />
+                  </div>
+                  <div class="flex gap-2 items-center">
+                    <p>শিক্ষাবর্ষ:</p>
+                    <input type="text" class="w-full py-2 bg-transparent border-b border-black border-dotted" />
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                  <div class="flex gap-2 items-center">
+                    <p>ক্লাস:</p>
+                    <input type="text" class="w-full py-2 bg-transparent border-b border-black border-dotted" />
+                  </div>
+                  <div class="flex gap-2 items-center">
+                    <p>রোল:</p>
+                    <input type="text" class="w-full py-2 bg-transparent border-b border-black border-dotted" />
+                  </div>
+                  <div class="flex gap-2 items-center">
+                    <p>বিষয়:</p>
+                    <input type="text" class="w-full py-2 bg-transparent border-b border-black border-dotted" />
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                  <div class="flex gap-2 items-center">
+                    <p>জন্ম তারিখ:</p>
+                    <input type="text" class="w-full py-2 bg-transparent border-b border-black border-dotted" />
+                  </div>
+                  <div class="flex gap-2 items-center">
+                    <p>শিক্ষাবর্ষ:</p>
+                    <input type="text" class="w-full py-2 bg-transparent border-b border-black border-dotted" />
+                  </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                  <div class="flex gap-2 items-center">
+                    <p>জন্ম তারিখ:</p>
+                    <input type="text" class="w-full py-2 bg-transparent border-b border-black border-dotted" />
+                  </div>
+                  <div class="flex gap-2 items-center">
+                    <p>শিক্ষাবর্ষ:</p>
+                    <input type="text" class="w-full py-2 bg-transparent border-b border-black border-dotted" />
+                  </div>
+                </div>
+
+                <div class="flex gap-2 items-center">
+                  <p>বাংলা:</p>
+                  <input type="text" class="flex-grow py-2 bg-transparent border-b border-black border-dotted" />
+                </div>
+
+                <div>
+                  <table class="border w-full mt-5">
+                    <th class="border "><p>সংখ্যা</p></th>
+                    <th class="border"><p>পরীক্ষার নাম
+                    </p></th>
+                    <th class="border"><p>বোর্ড</p></th>
+                    <th class="border">q</th>
+                    <tr><td class="border">ক</td><td class="border">1</td><td class="border">1</td><td class="border">1</td></tr>
+                    <tr><td class="border">খ</td><td class="border">1</td><td class="border">1</td><td class="border">1</td></tr>
+                    <tr><td class="border">গ</td><td class="border">1</td><td class="border">1</td><td class="border">1</td></tr>
+                  </table>
+                </div>
+
+                <div class="flex gap-2 items-center">
+                  <p>জীবনের লক্ষ্য:</p>
+                  <input type="text" class="flex-grow py-2 bg-transparent border-b border-black border-dotted" />
+                </div>
+
+
+              </form>
+            </div>
+          </div>
         </div>
-
-    </div>
- </div>
+        
+      </div>
 
       <!-- footer -->
       <footer
@@ -192,6 +325,5 @@
         </div>
       </footer>
     </div>
-
   </body>
 </html>
